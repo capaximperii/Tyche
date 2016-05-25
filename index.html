@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tyche</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/angular-timeline-animations.css">
+  <link rel="stylesheet" href="css/angular-timeline-bootstrap.css">
+  <link rel="stylesheet" href="css/angular-timeline.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-timeline.js"></script>
+  <script src="controllers/app.controller.js"></script>
+</head>
+
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+  <div class="container-fluid">
+   <div class="row">
+	<img src="/img/back.png" class="img-responsive">
+   </div>
+</div>
+    <div class="container">
+    	<div class="col-md-9">
+			<H2>Luv SINGH <small><br>Linux and Web full stack developer</small></H2>
+		</div>
+    	<div class="col-md-3">
+			<H2>CALL ME</H2>
+		</div>
+	<div class="col-xs-12" style="height:50px;"></div>
+	</div>
+    <div class="container">
+	    <div class="col-md-4">
+	    	<div class="nopadding">
+      			<div>
+        			<table class="table bordered striped">
+        				<caption>PERSONAL</caption>
+				        <tr>
+				        	<td class="col-md-1 text-center">
+				        		<p><span class="glyphicon glyphicon-envelope gi-2x"></span></p>
+				        	</td>
+				            <td class="col-md-3">Luv Singh</td>
+				        </tr>
+			        </table>
+
+        			<table class="table bordered striped">
+        			<caption>WORK EXPERIENCE</caption>
+				        <tr>
+				        	<td class="col-md-1 text-center">
+				        		Total
+				        	</td>
+				            <td class="col-md-3">6 years</td>
+				        </tr>
+				        <tr>
+				        	<td class="col-md-1 text-center">
+				        		Currently
+				        	</td>
+				            <td class="col-md-3"> Team Lead</td>
+				        </tr>
+
+			        </table>
+
+        			<table class="table bordered striped">
+        				<caption>SKILLS</caption>
+				        <tr>
+				        	<td class="col-md-1 text-center">
+				        		Python
+				        	</td>
+				            <td class="col-md-3">
+				            	 <div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70"
+									  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+									</div>
+								</div>
+				            </td>
+				        </tr>
+			        </table>
+
+      			</div>
+    		</div>
+	  	</div>
+
+	  	<!-- TWO -->
+	  	<div class="col-md-5">
+	  		<timeline>
+		        <timeline-event ng-repeat="event in events" side="right">
+		          <timeline-badge class="{{event.badgeClass}}">
+		            <!-- <i class="glyphicon {{event.badgeIconClass}}"></i> -->
+		            <span>2001</span>
+		          </timeline-badge>
+		          <timeline-panel class="{{event.badgeClass}}">
+		            <timeline-heading>
+		              <h4>{{event.title}}</h4>
+		            </timeline-heading>
+		            <p>{{event.content}}</p>
+		          </timeline-panel>
+		        </timeline-event>
+    		</timeline>
+
+
+	  	</div>
+	  	<div class="col-md-3" style="background-color: red;">
+	  		three
+	  	</div>
+	</div>
+  </body>
+
+</html>
