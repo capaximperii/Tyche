@@ -1,0 +1,7 @@
+  @import url("css/bootstrap.min.css") print;
+  @import url("css/custom.css") print;
+  @import url("css/angular-timeline-animations.css") print;
+  @import url("css/angular-timeline-bootstrap.css") print;
+  @import url("css/angular-timeline.css") print;
+@page { }
+@media print { }

@@ -16,4 +16,16 @@ app.controller('myCtrl', function($scope, $http) {
     content: 'More awesome content.'
   }];
   
+  $scope.pageImage = function() {
+    html2canvas(document.body, {  
+      onrendered: function(canvas) {
+        // $("#page").hide();
+        document.body.appendChild(canvas);
+        // window.print();
+        // $('canvas').remove();
+        // $("#page").show();
+      }
+    });
+  };
+
 });
