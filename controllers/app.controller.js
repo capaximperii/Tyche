@@ -32,10 +32,11 @@ app.controller('myCtrl', function($scope, $timeout) {
 
   $scope.onLoad = function () {
     $timeout(function() {
-      var h = $(document).height();
+      var h = $("#heightmarker").offset();
       var div =  $('#fullpage');
-      console.log(h);
-      div.height(h);
+      var correction = h.top - div.offset().top;
+      div.height(correction);
+      console.log(correction);
     }, 1000);
   }
 
