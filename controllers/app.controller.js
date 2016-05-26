@@ -1,19 +1,21 @@
  
 var app = angular.module('myApp', ['angular-timeline']);
 
-app.controller('myCtrl', function($scope, $http) {
+app.controller('myCtrl', function($scope, $timeout) {
 
 
   $scope.events = [{
     badgeClass: 'info',
     badgeIconClass: 'glyphicon-check',
-    title: 'First heading',
-    content: 'Some awesome content.'
+    title: 'First role',
+    company: 'Some awesome company.',
+    place: 'city name'
   }, {
     badgeClass: 'warning',
     badgeIconClass: 'glyphicon-credit-card',
-    title: 'Second heading',
-    content: 'More awesome content.'
+    title: 'Second role',
+    company: 'Some awesome company.',
+    place: 'city name'
   }];
   
   $scope.pageImage = function() {
@@ -27,5 +29,16 @@ app.controller('myCtrl', function($scope, $http) {
       }
     });
   };
+
+  $scope.onLoad = function () {
+    $timeout(function() {
+      var h = $(document).height();
+      var div =  $('#fullpage');
+      console.log(h);
+      div.height(h);
+    }, 1000);
+  }
+
+  $scope.onLoad();
 
 });

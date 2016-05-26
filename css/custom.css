@@ -10,3 +10,23 @@
 .gi-3x{font-size: 3em;}
 .gi-4x{font-size: 4em;}
 .gi-5x{font-size: 5em;}
+
+.singleline {
+	white-space: nowrap;
+}
+
+.blueback {
+		height: 100px;
+		background-color:  #aed6f1;
+}
+
+
+kbd {
+	padding: 2px;
+	font-size: 90%;
+	color: #fff;
+	background-color: #333;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
