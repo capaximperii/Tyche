@@ -11,6 +11,7 @@
   <link rel="stylesheet" media="all" href="css/angular-timeline.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.plugin.html2canvas.js"></script>
   <script src="js/html2canvas.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/angular.min.js"></script>
@@ -27,7 +28,7 @@
 </div>
     <div class="container">
 	    	<div class="col-xs-9">
-				<H2 ng-click="pageImage()">Luv SINGH <small><br>Linux and Web full stack developer</small></H2>
+				<H2>Luv  SINGH <small><br>Linux  and Web full stack developer</small></H2>
 			</div>
 	    	<div class="col-xs-3 blueback">
 			</div>
@@ -46,7 +47,7 @@
 		        <timeline-event ng-repeat="event in events" side="right">
 		          <timeline-badge class="{{event.badgeClass}}">
 		            <!-- <i class="glyphicon {{event.badgeIconClass}}"></i> -->
-		            <span>2001</span>
+		            <span>{{event.year}}</span>
 		          </timeline-badge>
 		          <timeline-panel class="{{event.badgeClass}}">
 		            <timeline-heading class="singleline">
@@ -57,12 +58,35 @@
 		          </timeline-panel>
 		        </timeline-event>
     		</timeline>
+			<div id="heightmarker2" class="heightmarker"></div>
 
 
 	  	</div>
 	  	<div class="col-xs-3 blueback" id="fullpage">
-	  		three
+	  		<H3><small>ABOUT ME</small></H3>
+	  		<p>With over 7 years of experience in different domains across organisations that are world leaders, I have recently upgraded my skill as a full stack web developer to add to my experience as an embedded Linux Engineer. I am looking for new opportunities and the areas of keen interest are machine learning, Internet of Things, AI.</p>
+
+	  		<br><br><br><br><br>
+	  		<br>
+	  		<br>
+	  		<br>
+	  		<br>
+	  		<br>
+	  		<br>
+	  		<br>
+	  		<H3><small>REFERENCES</small></H3>
+	  		<B>Randall Fields<B>
+	  		<B>Project manager at Qualcomm</B>
+	  		<p>some number</p>
+	  		<B>Ravi Dhanshetty<B>
+	  		<B>Team Lead at Dell</B>
+	  		<p>some number</p>
 	  	</div>
+	</div>
+	  <div class="container-fluid">
+   <div class="row">
+	<img src="/img/back.png" class=" col-xs-12 img-responsive">
+   </div>
 	</div>
   </body>
 
