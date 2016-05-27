@@ -40,14 +40,14 @@ app.controller('myCtrl', function($scope, $timeout) {
     title: 'Senior Engineer',
     company: 'TeamF1 (D-Link)',
     place: 'Hyderabad',
-    year: '2006'
+    year: '2009'
   },{
     badgeClass: 'warning',
     badgeIconClass: 'glyphicon-credit-card',
     title: 'Staff Engineer',
     company: 'Comptrix Systems Pvt Ltd',
     place: 'Pune',
-    year: '2006'
+    year: '2009'
   }
   ];
   
