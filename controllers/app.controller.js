@@ -1,19 +1,18 @@
  
 var app = angular.module('myApp');
 
-app.controller('myCtrl', function($scope, $timeout, $state) {
+app.controller('resumeCtrl', function($scope, $timeout, $state, $stateParams) {
 
+  $scope.cv = $stateParams.cv;
 
   $scope.events = [{
     badgeClass: 'info',
-    badgeIconClass: 'glyphicon-check',
     title: 'Internship',
     company: 'Henoida',
     place: 'Paris',
     year: '2016'
   }, {
     badgeClass: 'warning',
-    badgeIconClass: 'glyphicon-credit-card',
     title: 'Masters',
     company: 'EPITA',
     place: 'Paris',
@@ -21,7 +20,6 @@ app.controller('myCtrl', function($scope, $timeout, $state) {
   },
   {
     badgeClass: 'info',
-    badgeIconClass: 'glyphicon-credit-card',
     title: 'Staff Engineer',
     company: 'Dell Wyse',
     place: 'Bangalore',
@@ -29,21 +27,18 @@ app.controller('myCtrl', function($scope, $timeout, $state) {
   },
   {
     badgeClass: 'info',
-    badgeIconClass: 'glyphicon-credit-card',
     title: 'Consultant Engineer',
     company: 'Qualcomm',
     place: 'Hyderabad',
     year: '2010'
   },{
     badgeClass: 'warning',
-    badgeIconClass: 'glyphicon-credit-card',
     title: 'Senior Engineer',
     company: 'TeamF1 (D-Link)',
     place: 'Hyderabad',
     year: '2009'
   },{
     badgeClass: 'warning',
-    badgeIconClass: 'glyphicon-credit-card',
     title: 'Staff Engineer',
     company: 'Comptrix Systems Pvt Ltd',
     place: 'Pune',
@@ -63,6 +58,4 @@ app.controller('myCtrl', function($scope, $timeout, $state) {
   }
 
   $scope.onLoad();
-  $state.go('resume');
-
 });

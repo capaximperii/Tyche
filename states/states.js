@@ -7,7 +7,7 @@ app.config(function ($stateProvider) {
 			views: {
 				'content@': {
 					templateUrl: 'fragments/form.html',
-					controller: 'myCtrl'
+					controller: 'formCtrl'
 				}
 			}
 		})
@@ -16,8 +16,9 @@ app.config(function ($stateProvider) {
 			views: {
 				'content@': {
 					templateUrl: 'fragments/resume.html',
-					controller: 'myCtrl'
+					controller: 'resumeCtrl'
 				}
-			}
+			},
+			params: {cv: null}
 		});
 	});
