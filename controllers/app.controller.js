@@ -1,50 +1,50 @@
  
 var app = angular.module('myApp');
 
-app.controller('resumeCtrl', function($scope, $timeout, $state, $stateParams) {
+app.controller('resumeCtrl', function($scope, $timeout, storage) {
 
-  $scope.cv = $stateParams.cv;
+  $scope.cv = storage.get();
 
-  $scope.events = [{
-    badgeClass: 'info',
-    title: 'Internship',
-    company: 'Henoida',
-    place: 'Paris',
-    year: '2016'
-  }, {
-    badgeClass: 'warning',
-    title: 'Masters',
-    company: 'EPITA',
-    place: 'Paris',
-    year: '2014'
-  },
-  {
-    badgeClass: 'info',
-    title: 'Staff Engineer',
-    company: 'Dell Wyse',
-    place: 'Bangalore',
-    year: '2012'
-  },
-  {
-    badgeClass: 'info',
-    title: 'Consultant Engineer',
-    company: 'Qualcomm',
-    place: 'Hyderabad',
-    year: '2010'
-  },{
-    badgeClass: 'warning',
-    title: 'Senior Engineer',
-    company: 'TeamF1 (D-Link)',
-    place: 'Hyderabad',
-    year: '2009'
-  },{
-    badgeClass: 'warning',
-    title: 'Staff Engineer',
-    company: 'Comptrix Systems Pvt Ltd',
-    place: 'Pune',
-    year: '2009'
-  }
-  ];
+  // $scope.events = [{
+  //   badgeClass: 'info',
+  //   title: 'Internship',
+  //   company: 'Henoida',
+  //   place: 'Paris',
+  //   year: '2016'
+  // }, {
+  //   badgeClass: 'warning',
+  //   title: 'Masters',
+  //   company: 'EPITA',
+  //   place: 'Paris',
+  //   year: '2014'
+  // },
+  // {
+  //   badgeClass: 'info',
+  //   title: 'Staff Engineer',
+  //   company: 'Dell Wyse',
+  //   place: 'Bangalore',
+  //   year: '2012'
+  // },
+  // {
+  //   badgeClass: 'info',
+  //   title: 'Consultant Engineer',
+  //   company: 'Qualcomm',
+  //   place: 'Hyderabad',
+  //   year: '2010'
+  // },{
+  //   badgeClass: 'warning',
+  //   title: 'Senior Engineer',
+  //   company: 'TeamF1 (D-Link)',
+  //   place: 'Hyderabad',
+  //   year: '2009'
+  // },{
+  //   badgeClass: 'warning',
+  //   title: 'Staff Engineer',
+  //   company: 'Comptrix Systems Pvt Ltd',
+  //   place: 'Pune',
+  //   year: '2009'
+  // }
+  // ];
   
 
   $scope.onLoad = function () {

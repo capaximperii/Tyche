@@ -1,8 +1,7 @@
     <div class="col-xs-5">
         <timeline>
-            <timeline-event ng-repeat="event in events" side="right">
+            <timeline-event ng-repeat="event in cv.timeline" side="right">
                 <timeline-badge class="{{event.badgeClass}}">
-                    <!-- <i class="glyphicon {{event.badgeIconClass}}"></i> -->
                     <span>{{event.year}}</span>
                 </timeline-badge>
                 <timeline-panel class="{{event.badgeClass}}">

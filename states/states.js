@@ -18,7 +18,6 @@ app.config(function ($stateProvider) {
 					templateUrl: 'fragments/resume.html',
 					controller: 'resumeCtrl'
 				}
-			},
-			params: {cv: null}
+			}
 		});
 	});

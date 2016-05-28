@@ -5,8 +5,24 @@
             <input type="text" class="form-control" id="name" placeholder="Enter name" ng-model="cv.name">
         </fieldset>
         <fieldset class="form-group">
+            <label for="headline">Headline</label>
+            <input type="text" class="form-control" id="headline" placeholder="Enter a short description of your expertise" ng-model="cv.headline">
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="text" class="form-control" id="phone" placeholder="Enter Phone" ng-model="cv.phone">
+        </fieldset>
+        <fieldset class="form-group">
             <label for="email">Email address</label>
             <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="cv.email">
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="languages">Languages</label>
+            <input type="text" class="form-control" id="languages" placeholder="Enter languages" ng-model="cv.languages">
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="address">Postal address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter your address" ng-model="cv.address">
         </fieldset>
         <fieldset class="form-group">
             <label for="linkedin">LinkedIn Url</label>
@@ -16,15 +32,96 @@
             <label for="linkedin">GitHub Url</label>
             <input type="url" class="form-control" id="github" placeholder="GitHub Url" ng-model="cv.github">
         </fieldset>
+
+        <fieldset class="form-group">
+            <label for="experience">Work Experience</label>
+            <input type="text" class="form-control" id="experience" placeholder="Enter duration of experience" ng-model="cv.experience">
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="designation">Current designation</label>
+            <input type="text" class="form-control" id="designation" placeholder="Enter current designation" ng-model="cv.designation">
+        </fieldset>
+
+        <label>Work Experience Details</label>
+        <ul>
+            <li ng-repeat="d in cv.timeline">{{d.year + ' ->  ' + d.title + ' - > '  + d.company + '  - > ' + d.place  }}</li>
+        </ul>
+        <div class="container">
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Title" type="text" ng-model="title">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Company" type="text" ng-model="company">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Place" type="text" ng-model="place">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Year" type="text" ng-model="year">
+            </div>
+
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" ng-click="addTimeline()">Add</button>
+            </div>
+        </div>
+
+
+
+        <label>Education</label>
+        <ul>
+            <li ng-repeat="d in cv.education">{{d.degree + ' ->  '  + d.university }}</li>
+        </ul>
+        <div class="container">
+            <div class="col-sm-4">
+                <input class="form-control" placeholder="Degree" type="text" ng-model="degree">
+            </div>
+            <div class="col-sm-4">
+                <input class="form-control" placeholder="University" type="text" ng-model="university">
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" ng-click="addEducation()">Add</button>
+            </div>
+        </div>
+
+        <label>Skills</label>
+        <ul>
+            <li ng-repeat="d in cv.skills">{{d.skill + ' ->  '  + d.proficiency }}</li>
+        </ul>
+        <div class="container">
+            <div class="col-sm-4">
+                <input class="form-control" placeholder="Skill name" type="text" ng-model="skill">
+            </div>
+            <div class="col-sm-4">
+                <input class="form-control" placeholder="Proficiency out of 100" type="text" ng-model="proficiency">
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" ng-click="addSkill()">Add</button>
+            </div>
+        </div>
+
+        <label>Extra Skills</label>
+        <ul>
+            <li ng-repeat="d in cv.extraskills">{{d.skill}}</li>
+        </ul>
+        <div class="container">
+            <div class="col-sm-8">
+                <input class="form-control" placeholder="Extra Skill name" type="text" ng-model="extraskill">
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" ng-click="addExtraSkill()">Add</button>
+            </div>
+        </div>
+
+
         <fieldset class="form-group">
             <label for="aboutme">About me</label>
-            <textarea class="form-control" id="aboutme" rows="10" ng-model="cv.aboutme"></textarea>
+            <textarea class="form-control" id="aboutme" rows="10" columns= "100" ng-model="cv.aboutme"></textarea>
         </fieldset>
         <div class="checkbox">
             <label>
                 <input type="checkbox"> Check me out
             </label>
         </div>
-        <button type="submit" class="btn btn-primary" ui-sref="resume({cv: cv})">View</button>
+        <button type="submit" class="btn btn-primary" ui-sref="resume()">View</button>
     </form>
 </div>
