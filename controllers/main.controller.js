@@ -1,7 +1,7 @@
  
-var app = angular.module('myApp');
+var app = angular.module('myApp', ['ui.router','angular-timeline']);
 
-app.controller('myCtrl', function($scope, $timeout, $state) {
+app.controller('myCtrl', function($scope, $timeout) {
 
 
   $scope.events = [{
@@ -63,6 +63,6 @@ app.controller('myCtrl', function($scope, $timeout, $state) {
   }
 
   $scope.onLoad();
-  $state.go('resume');
+  $state.go('/resume');
 
 });
