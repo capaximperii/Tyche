@@ -16,7 +16,8 @@
 }
 
 .blueback {
-		height: 100px;
+		/*height: 100px;*/
+		border-color: #aed6f1;
 		background-color:  #aed6f1;
 }
 

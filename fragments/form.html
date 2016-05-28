@@ -56,8 +56,13 @@
             <div class="col-sm-3">
                 <input class="form-control" placeholder="Place" type="text" ng-model="place">
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <input class="form-control" placeholder="Year" type="text" ng-model="year">
+            </div>
+            <div class="col-sm-1 checkbox">
+                <label>
+                    <input type="checkbox" ng-model="isSchool"> School?
+                </label>
             </div>
 
             <div class="col-sm-4">
@@ -139,12 +144,6 @@
             <div class="col-sm-4">
                 <button type="button" class="btn btn-primary" ng-click="addReference()">Add</button>
             </div>
-        </div>
-
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Check me out
-            </label>
         </div>
         <button type="submit" class="btn btn-primary" ui-sref="resume()">View</button>
     </form>
