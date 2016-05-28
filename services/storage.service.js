@@ -1,7 +1,7 @@
 var app = angular.module('myApp');
 
 app.service('storage', function() {
-    this.store = {skills:[], education:[], extraskills:[], timeline: []};
+    this.store = {skills:[], education:[], extraskills:[], timeline: [], references:[]};
     this.get = function () {
         return this.store;
     }

@@ -101,7 +101,7 @@
 
         <label>Extra Skills</label>
         <ul>
-            <li ng-repeat="d in cv.extraskills">{{d.skill}}</li>
+            <li ng-repeat="s in cv.extraskills">{{s}}</li>
         </ul>
         <div class="container">
             <div class="col-sm-8">
@@ -112,11 +112,35 @@
             </div>
         </div>
 
-
         <fieldset class="form-group">
             <label for="aboutme">About me</label>
             <textarea class="form-control" id="aboutme" rows="10" columns= "100" ng-model="cv.aboutme"></textarea>
         </fieldset>
+
+        <label>References</label>
+        <ul>
+            <li ng-repeat="r in cv.references">
+                {{r.name + ' ->  '  + r.company + ' - > ' + r.position  + ' -> ' + r.email }}
+            </li>
+        </ul>
+        <div class="container">
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Reference name" type="text" ng-model="refname">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Company" type="text" ng-model="refcompany">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Position" type="text" ng-model="refposition">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Email" type="email" ng-model="refemail">
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" ng-click="addReference()">Add</button>
+            </div>
+        </div>
+
         <div class="checkbox">
             <label>
                 <input type="checkbox"> Check me out

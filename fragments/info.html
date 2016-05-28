@@ -1,7 +1,7 @@
 <div>
 
 		<div class="col-xs-9">
-			<H2>{{cv.name}}<small><br>{{cv.summary}}</small></H2>
+			<H2>{{cv.name}}<small><br>{{cv.headline}}</small></H2>
 		</div>
 		<div class="col-xs-3 blueback">
 		</div>
@@ -100,7 +100,7 @@
 				        		<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
 				        	</td>
 				        	<td class="col-xs-3">
-				        		<kbd ng-repeat="s in cv.extraskills">{{s.skill}}</kbd>
+				        		<kbd ng-repeat="s in cv.extraskills">{{s}}</kbd>
 				            </td>
 				        <tr>
 				        </tr>
