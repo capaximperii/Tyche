@@ -5,14 +5,16 @@
         <div class="blueback" style="height:50px;">
         </div>
 
-        <H3><small>REFERENCES</small></H3>
-        <div class="list-group" ng-repeat="r in cv.references" style="top:0; bottom:0;">
-          <div class="list-group-item blueback">
-            <h4 class="list-group-item-heading">{{r.name}}</h4>
-            <strong class="list-group-item-heading">{{r.company + ', ' + r.position }}</strong>
-            <p class="list-group-item-text"><i class="fa fa-envelope" aria-hidden="true"></i>
-                {{r.email}}
-            </p>
-          </div>
+        <div ng-if="cv.references.length > 0">
+            <H3><small>REFERENCES</small></H3>
+            <div class="list-group" ng-repeat="r in cv.references" style="top:0; bottom:0;">
+              <div class="list-group-item blueback">
+                <h4 class="list-group-item-heading">{{r.name}}</h4>
+                <strong class="list-group-item-heading">{{r.company + ', ' + r.position }}</strong>
+                <p class="list-group-item-text"><i class="fa fa-envelope" aria-hidden="true"></i>
+                    {{r.email}}
+                </p>
+              </div>
+            </div>
         </div>
 </div>
