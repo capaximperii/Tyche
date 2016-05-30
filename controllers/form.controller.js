@@ -23,6 +23,7 @@ app.controller('formCtrl', function($scope, storage, $state) {
 	$scope.addReference = function() {
 		$scope.cv.references.push({name: $scope.refname, company: $scope.refcompany, position: $scope.refposition, email: $scope.refemail});
 	};
-
-
+	$scope.reset = function(field) {
+		field.length = 0;
+	};
 });

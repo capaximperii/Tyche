@@ -67,6 +67,8 @@
 
             <div class="col-sm-4">
                 <button type="button" class="btn btn-primary" ng-click="addTimeline()">Add</button>
+                <button type="button" class="btn btn-primary" ng-click="reset(cv.timeline)">Reset</button>
+
             </div>
         </div>
 
@@ -85,6 +87,7 @@
             </div>
             <div class="col-sm-4">
                 <button type="button" class="btn btn-primary" ng-click="addEducation()">Add</button>
+                <button type="button" class="btn btn-primary" ng-click="reset(cv.education)">Reset</button>
             </div>
         </div>
 
@@ -101,6 +104,8 @@
             </div>
             <div class="col-sm-4">
                 <button type="button" class="btn btn-primary" ng-click="addSkill()">Add</button>
+                <button type="button" class="btn btn-primary" ng-click="reset(cv.skills)">Reset</button>
+
             </div>
         </div>
 
@@ -114,7 +119,10 @@
             </div>
             <div class="col-sm-4">
                 <button type="button" class="btn btn-primary" ng-click="addExtraSkill()">Add</button>
+                <button type="button" class="btn btn-primary" ng-click="reset(cv.extraskills)">Reset</button>
+
             </div>
+
         </div>
 
         <label>Interests / Extra curricular</label>
@@ -127,6 +135,8 @@
             </div>
             <div class="col-sm-4">
                 <button type="button" class="btn btn-primary" ng-click="addInterest()">Add</button>
+                <button type="button" class="btn btn-primary" ng-click="reset(cv.interests)">Reset</button>
+
             </div>
         </div>
 
@@ -159,6 +169,7 @@
             </div>
             <div class="col-sm-4">
                 <button type="button" class="btn btn-primary" ng-click="addReference()">Add</button>
+                <button type="button" class="btn btn-primary" ng-click="reset(cv.references)">Reset</button>
             </div>
         </div>
         <button type="submit" class="btn btn-primary" ui-sref="resume()">View</button>
