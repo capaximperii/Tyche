@@ -46,7 +46,7 @@
 				        	</td>
 				        		<td class="col-xs-3">{{cv.linkedin}}</td>
 				        </tr>
-				        <tr>
+				        <tr ng-if="cv.github.length > 0">
 				        	<td class="col-xs-1 text-center">
 				        		<i class="fa fa-github"  aria-hidden="true"></i>
 				        	</td>
@@ -105,6 +105,16 @@
 				        <tr>
 				        </tr>
 			        </table>
+
+        			<table class="table bordered striped">
+        				<caption>INTERESTS</caption>
+				        <tr ng-repeat="s in cv.interests">
+				        	<td class="text-left">
+				        		<span class="interest">{{s}}</span>
+				        	</td>
+				        </tr>
+				    </table>
+
 			        <div id="heightmarker1" class="heightmarker"></div>
 	  	</div>
 </div>	  	

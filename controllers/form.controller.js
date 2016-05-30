@@ -12,6 +12,9 @@ app.controller('formCtrl', function($scope, storage, $state) {
 	$scope.addExtraSkill = function() {
 		$scope.cv.extraskills.push($scope.extraskill);
 	};
+	$scope.addInterest = function() {
+		$scope.cv.interests.push($scope.interest);
+	};
 	$scope.addTimeline = function() {
 		if($scope.isSchool == true) badgeClass = 'warning';
 		else badgeClass = 'info';
